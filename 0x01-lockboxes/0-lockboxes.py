@@ -3,6 +3,7 @@
 This is checking if all the boxes can be opened
 """
 
+
 def canUnlockAll(boxes):
 
     def get_key(box):
@@ -17,6 +18,5 @@ def canUnlockAll(boxes):
         if key not in opened and key < len(boxes):
             opened.add(key)
             get_key(boxes[key])
-
 
     return len(opened) == len(boxes)
